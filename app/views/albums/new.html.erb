@@ -1,0 +1,35 @@
+
+<div class ="container artist">
+	<div class= "row">
+		<div class="col-sm-12">
+			<header>
+				<h1> Album nuevo:</h1>
+			</header>
+			<div class="artist-list">
+					<div class = "room">
+						<div class= "row">
+							<div class="col-sm-7 col-md-8">
+								<%= form_for @album, url: artist_albums_path, html: { method: :post } do |f| %>
+									<h4>Nombre:</h4>
+									<dir class = "form-group">
+										<%= f.text_field :name, class: 'form-control input-lg'%>
+									</dir>	
+									<h4>Imagen:</h4>
+									<dir class = "form-group">
+										<%= f.text_field :image_url, class: 'form-control input-lg'%>
+									</dir>
+									<h4>Dia de lanzamiento:</h4>
+									<dir class = "form-group">
+										<%= f.date_field :released_at, class: 'form-control input-lg'%>
+									</dir>		
+									<div class="actions text-right">
+										<%= f.submit @album.new_record? ? "Crear artista ": "Editar artista", class: "btn btn-primary btn-lg btn-block" %>
+									</div>
+								<% end %>
+							</div>
+						</div>
+					</div>					
+			</div>
+		</div>
+	</div>
+</div>

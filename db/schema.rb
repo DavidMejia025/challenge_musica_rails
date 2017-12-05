@@ -12,25 +12,25 @@
 
 ActiveRecord::Schema.define(version: 20171205155639) do
 
-  create_table "album_tables", force: :cascade do |t|
+  create_table "albums", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
     t.date "released_at"
     t.integer "artist_id"
-    t.index ["artist_id"], name: "index_album_tables_on_artist_id"
+    t.index ["artist_id"], name: "index_albums_on_artist_id"
   end
 
-  create_table "artist_tables", force: :cascade do |t|
+  create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
   end
 
-  create_table "song_tables", force: :cascade do |t|
+  create_table "songs", force: :cascade do |t|
     t.string "name"
     t.integer "number"
     t.string "preview_url"
     t.integer "album_id"
-    t.index ["album_id"], name: "index_song_tables_on_album_id"
+    t.index ["album_id"], name: "index_songs_on_album_id"
   end
 
 end

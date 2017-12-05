@@ -1,6 +1,6 @@
 class CreateAlbumTable < ActiveRecord::Migration[5.1]
   def change
-    create_table :album_tables do |t|
+    create_table :albums do |t|
       t.string :name
       t.string :image_url
       t.date :released_at

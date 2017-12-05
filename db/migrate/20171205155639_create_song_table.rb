@@ -1,6 +1,6 @@
 class CreateSongTable < ActiveRecord::Migration[5.1]
   def change
-    create_table :song_tables do |t|
+    create_table :songs do |t|
       t.string :name
       t.integer :number
       t.string :preview_url
